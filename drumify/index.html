@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Drumify | Magenta Studio Online</title>
+    <link
+      rel="stylesheet"
+      href="https://stevecherry.net/normcore/css/normcore.css"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@3.11.0/dist/tf.min.js"
+      defer
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@magenta/music@1.23.1/es6/core.js"
+      defer
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@magenta/music@1.23.1/es6/music_vae.js"
+      defer
+    ></script>
+    <script
+      src="https://stevecherry.net/normcore/js/normcore.js"
+      defer
+    ></script>
+    <script src="../public/elements/app-form.js" defer></script>
+    <script src="./script.js" type="module"></script>
+  </head>
+  <body class="container stack">
+    <header role="banner">
+      <a href="../">Magenta Studio Online</a>
+    </header>
+    <main role="main">
+      <h1>Drumify</h1>
+      <app-form>
+        <form class="stack">
+          <div>
+            <label for="input" class="block">Input</label>
+            <input type="file" name="input" id="input" required />
+          </div>
+          <input-output class="block">
+            <label for="temperature" class="block">Temperature</label>
+            <input
+              type="range"
+              name="temperature"
+              id="temperature"
+              min="1"
+              max="32"
+              value="2"
+              data-target="input-output.input"
+            />
+            <output for="temperature" data-target="input-output.output"
+              >2</output
+            >
+          </input-output>
+          <button type="submit" disabled>Initializing&hellip;</button>
+        </form>
+      </app-form>
+    </main>
+  </body>
+</html>

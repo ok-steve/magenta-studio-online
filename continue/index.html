@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Continue | Magenta Studio Online</title>
+    <link
+      rel="stylesheet"
+      href="https://stevecherry.net/normcore/css/normcore.css"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@3.11.0/dist/tf.min.js"
+      defer
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@magenta/music@1.23.1/es6/core.js"
+      defer
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@magenta/music@1.23.1/es6/music_rnn.js"
+      defer
+    ></script>
+    <script
+      src="https://stevecherry.net/normcore/js/normcore.js"
+      defer
+    ></script>
+    <script src="../public/elements/app-form.js" defer></script>
+    <script src="./script.js" type="module"></script>
+  </head>
+  <body class="container stack">
+    <header role="banner">
+      <a href="../">Magenta Studio Online</a>
+    </header>
+    <main role="main">
+      <h1>Continue</h1>
+      <app-form>
+        <form class="stack">
+          <fieldset>
+            <legend>Mode</legend>
+            <input
+              type="radio"
+              name="mode"
+              id="mode-drums"
+              value="drum_kit_rnn"
+              checked
+            />
+            <label for="mode-drums">Drums</label>
+            <input
+              type="radio"
+              name="mode"
+              id="mode-melody"
+              value="melody_rnn"
+            />
+            <label for="mode-melody">Melody</label>
+          </fieldset>
+          <div>
+            <label for="input" class="block">Input</label>
+            <input type="file" name="input" id="input" required />
+          </div>
+          <div class="cluster">
+            <input-output class="flex-1">
+              <label for="variations" class="block">Variations</label>
+              <input
+                type="range"
+                name="variations"
+                id="variations"
+                min="1"
+                max="8"
+                value="4"
+                data-target="input-output.input"
+              />
+              <output for="variations" data-target="input-output.output"
+                >4</output
+              >
+            </input-output>
+            <input-output class="flex-1">
+              <label for="length" class="block">Length</label>
+              <input
+                type="range"
+                name="length"
+                id="length"
+                min="1"
+                max="32"
+                value="2"
+                data-target="input-output.input"
+              />
+              <output for="length" data-target="input-output.output">2</output>
+            </input-output>
+            <input-output class="flex-1">
+              <label for="temperature" class="block">Temperature</label>
+              <input
+                type="range"
+                name="temperature"
+                id="temperature"
+                min="1"
+                max="32"
+                value="2"
+                data-target="input-output.input"
+              />
+              <output for="temperature" data-target="input-output.output"
+                >2</output
+              >
+            </input-output>
+          </div>
+          <button type="submit" disabled>Initializing&hellip;</button>
+        </form>
+      </app-form>
+    </main>
+  </body>
+</html>
