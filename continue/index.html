@@ -26,6 +26,7 @@
       defer
     ></script>
     <script src="../public/elements/app-form.js" defer></script>
+    <script src="../public/elements/app-toast.js" defer></script>
     <script src="./script.js" type="module"></script>
   </head>
   <body class="container stack">
@@ -35,7 +36,7 @@
     <main role="main">
       <h1>Continue</h1>
       <app-form>
-        <form class="stack">
+        <form id="form" class="stack">
           <fieldset>
             <legend>Mode</legend>
             <input
@@ -107,5 +108,6 @@
         </form>
       </app-form>
     </main>
+    <app-toast form="form"></app-toast>
   </body>
 </html>

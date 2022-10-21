@@ -12,6 +12,7 @@ async function init() {
 
   const form = document.querySelector('app-form');
   const submit = form.querySelector('[type="submit"]');
+  const toast = document.querySelector('app-toast');
 
   /**
    * Models
@@ -59,7 +60,7 @@ async function init() {
       const output = await magentaGenerate(e.currentTarget.state);
       writeFiles(output, 'GENERATE');
     } catch (err) {
-      console.warn(err.message);
+      toast.open(err.message);
     }
 
     submit.textContent = 'Generate';

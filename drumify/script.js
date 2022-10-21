@@ -15,6 +15,7 @@ async function init() {
 
   const form = document.querySelector('app-form');
   const submit = form.querySelector('[type="submit"]');
+  const toast = document.querySelector('app-toast');
 
   /**
    * Models
@@ -58,7 +59,7 @@ async function init() {
       const output = await magentaDrumify(e.currentTarget.state);
       writeFiles(output, 'DRUMIFY');
     } catch (err) {
-      console.warn(err.message);
+      toast.open(err.message);
     }
 
     submit.textContent = 'Generate';
