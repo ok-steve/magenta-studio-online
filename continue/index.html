@@ -39,29 +39,33 @@
         <form id="form" class="stack">
           <fieldset>
             <legend>Mode</legend>
-            <input
-              type="radio"
-              name="mode"
-              id="mode-drums"
-              value="drum_kit_rnn"
-              checked
-            />
-            <label for="mode-drums">Drums</label>
-            <input
-              type="radio"
-              name="mode"
-              id="mode-melody"
-              value="melody_rnn"
-            />
-            <label for="mode-melody">Melody</label>
+            <label for="mode-drums">
+              <input
+                type="radio"
+                name="mode"
+                id="mode-drums"
+                value="drum_kit_rnn"
+                checked
+              />
+              Drums
+            </label>
+            <label for="mode-melody">
+              <input
+                type="radio"
+                name="mode"
+                id="mode-melody"
+                value="melody_rnn"
+              />
+              Melody
+            </label>
           </fieldset>
           <div>
-            <label for="input" class="block">Input</label>
+            <label for="input">Input</label>
             <input type="file" name="input" id="input" required />
           </div>
           <div class="cluster">
             <input-output class="flex-1">
-              <label for="variations" class="block">Variations</label>
+              <label for="variations">Variations</label>
               <input
                 type="range"
                 name="variations"
@@ -76,7 +80,7 @@
               >
             </input-output>
             <input-output class="flex-1">
-              <label for="length" class="block">Length</label>
+              <label for="length">Length</label>
               <input
                 type="range"
                 name="length"
@@ -89,7 +93,7 @@
               <output for="length" data-target="input-output.output">2</output>
             </input-output>
             <input-output class="flex-1">
-              <label for="temperature" class="block">Temperature</label>
+              <label for="temperature">Temperature</label>
               <input
                 type="range"
                 name="temperature"
