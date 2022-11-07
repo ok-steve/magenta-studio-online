@@ -64,7 +64,7 @@
             <input type="file" name="input" id="input" required />
           </div>
           <div class="cluster">
-            <input-output class="flex-auto">
+            <div class="flex-auto">
               <label for="variations">Variations</label>
               <input
                 type="range"
@@ -73,13 +73,10 @@
                 min="1"
                 max="8"
                 value="4"
-                data-target="input-output.input"
               />
-              <output for="variations" data-target="input-output.output"
-                >4</output
-              >
-            </input-output>
-            <input-output class="flex-auto">
+              <output for="variations">4</output>
+            </div>
+            <div class="flex-auto">
               <label for="length">Length</label>
               <input
                 type="range"
@@ -88,11 +85,10 @@
                 min="1"
                 max="32"
                 value="2"
-                data-target="input-output.input"
               />
-              <output for="length" data-target="input-output.output">2</output>
-            </input-output>
-            <input-output class="flex-auto">
+              <output for="length">2</output>
+            </div>
+            <div class="flex-auto">
               <label for="temperature">Temperature</label>
               <input
                 type="range"
@@ -101,12 +97,9 @@
                 min="1"
                 max="32"
                 value="2"
-                data-target="input-output.input"
               />
-              <output for="temperature" data-target="input-output.output"
-                >2</output
-              >
-            </input-output>
+              <output for="temperature">2</output>
+            </div>
           </div>
           <button type="submit" disabled>Initializing&hellip;</button>
         </form>
