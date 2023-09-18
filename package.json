@@ -1,0 +1,28 @@
+{
+  "name": "magenta-studio-online",
+  "private": true,
+  "version": "1.0.0",
+  "description": "An online version of Magenta Studio.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "live-server . --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ok-steve/magenta-studio-online.git"
+  },
+  "author": {
+    "name": "Steve Cherry",
+    "email": "steve@stevecherry.net",
+    "url": "https://stevecherry.net"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ok-steve/magenta-studio-online/issues"
+  },
+  "homepage": "https://github.com/ok-steve/magenta-studio-online#readme",
+  "devDependencies": {
+    "live-server": "^1.2.2"
+  }
+}
