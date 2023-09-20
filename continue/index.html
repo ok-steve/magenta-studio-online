@@ -1,10 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <title>Continue | Magenta Studio Online</title>
+    <meta name="description" content="An online version of Magenta Studio." />
+
     <link
       rel="stylesheet"
       href="https://stevecherry.net/normcore/css/normcore.css"
@@ -30,82 +33,98 @@
     <script src="../public/elements/app-toast.js" defer></script>
     <script src="./script.js" type="module"></script>
   </head>
-  <body class="container stack">
-    <header role="banner">
-      <a href="../">Magenta Studio Online</a>
-    </header>
-    <main class="stack" role="main">
-      <h1>Continue</h1>
-      <app-form>
-        <form id="form" class="stack">
-          <fieldset>
-            <legend>Mode</legend>
-            <label for="mode-drums">
-              <input
-                type="radio"
-                name="mode"
-                id="mode-drums"
-                value="drum_kit_rnn"
-                checked
-              />
-              Drums
-            </label>
-            <label for="mode-melody">
-              <input
-                type="radio"
-                name="mode"
-                id="mode-melody"
-                value="melody_rnn"
-              />
-              Melody
-            </label>
-          </fieldset>
-          <div>
-            <label for="input">Input</label>
-            <input type="file" name="input" id="input" required />
-          </div>
-          <div class="cluster">
-            <div class="flex-auto">
-              <label for="variations">Variations</label>
-              <input
-                type="range"
-                name="variations"
-                id="variations"
-                min="1"
-                max="8"
-                value="4"
-              />
-              <output for="variations">4</output>
+  <body>
+    <div class="container cover stack">
+      <header role="banner">
+        <a href="../">Magenta Studio Online</a>
+      </header>
+
+      <main class="[ stack ] [ flex-auto ]" role="main">
+        <h1>Continue</h1>
+
+        <app-form>
+          <form id="form" class="stack">
+            <fieldset>
+              <legend>Mode</legend>
+              <label for="mode-drums">
+                <input
+                  type="radio"
+                  name="mode"
+                  id="mode-drums"
+                  value="drum_kit_rnn"
+                  checked
+                />
+                Drums
+              </label>
+              <label for="mode-melody">
+                <input
+                  type="radio"
+                  name="mode"
+                  id="mode-melody"
+                  value="melody_rnn"
+                />
+                Melody
+              </label>
+            </fieldset>
+            <div>
+              <label for="input">Input</label>
+              <input type="file" name="input" id="input" required />
             </div>
-            <div class="flex-auto">
-              <label for="length">Length</label>
-              <input
-                type="range"
-                name="length"
-                id="length"
-                min="1"
-                max="32"
-                value="2"
-              />
-              <output for="length">2</output>
+            <div class="cluster">
+              <div class="flex-auto">
+                <label for="variations">Variations</label>
+                <input
+                  type="range"
+                  name="variations"
+                  id="variations"
+                  min="1"
+                  max="8"
+                  value="4"
+                />
+                <output for="variations">4</output>
+              </div>
+              <div class="flex-auto">
+                <label for="length">Length</label>
+                <input
+                  type="range"
+                  name="length"
+                  id="length"
+                  min="1"
+                  max="32"
+                  value="2"
+                />
+                <output for="length">2</output>
+              </div>
+              <div class="flex-auto">
+                <label for="temperature">Temperature</label>
+                <input
+                  type="range"
+                  name="temperature"
+                  id="temperature"
+                  min="1"
+                  max="32"
+                  value="2"
+                />
+                <output for="temperature">2</output>
+              </div>
             </div>
-            <div class="flex-auto">
-              <label for="temperature">Temperature</label>
-              <input
-                type="range"
-                name="temperature"
-                id="temperature"
-                min="1"
-                max="32"
-                value="2"
-              />
-              <output for="temperature">2</output>
-            </div>
-          </div>
-          <button type="submit" disabled>Initializing&hellip;</button>
-        </form>
-      </app-form>
-    </main>
-    <app-toast form="form"></app-toast>
+            <button type="submit" disabled>Initializing&hellip;</button>
+          </form>
+        </app-form>
+
+        <app-toast form="form"></app-toast>
+      </main>
+
+      <footer class="stack" role="contentinfo">
+        <p>An online version of Magenta Studio.</p>
+        <p>
+          Yet another
+          <a href="https://github.com/ok-steve/magenta-studio-online#readme"
+            >project</a
+          >
+          by <a href="https://stevecherry.net">Steve Cherry</a>.
+        </p>
+      </footer>
+    </div>
   </body>
 </html>

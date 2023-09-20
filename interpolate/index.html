@@ -1,10 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <title>Interpolate | Magenta Studio Online</title>
+    <meta name="description" content="An online version of Magenta Studio." />
+
     <link
       rel="stylesheet"
       href="https://stevecherry.net/normcore/css/normcore.css"
@@ -30,76 +33,92 @@
     <script src="../public/elements/app-toast.js" defer></script>
     <script src="./script.js" type="module"></script>
   </head>
-  <body class="container stack">
-    <header role="banner">
-      <a href="../">Magenta Studio Online</a>
-    </header>
-    <main class="stack" role="main">
-      <h1>Interpolate</h1>
-      <app-form>
-        <form id="form" class="stack">
-          <fieldset>
-            <legend>Mode</legend>
-            <label for="mode-drums">
-              <input
-                type="radio"
-                name="mode"
-                id="mode-drums"
-                value="drums_4bar_med_q2"
-                checked
-              />
-              Drums
-            </label>
-            <label for="mode-melody">
-              <input
-                type="radio"
-                name="mode"
-                id="mode-melody"
-                value="mel_4bar_med_q2"
-              />
-              Melody
-            </label>
-          </fieldset>
-          <div class="cluster">
-            <div class="flex-auto">
-              <label for="inputOne">Input 1</label>
-              <input type="file" name="inputOne" id="inputOne" required />
+  <body>
+    <div class="container cover stack">
+      <header role="banner">
+        <a href="../">Magenta Studio Online</a>
+      </header>
+
+      <main class="[ stack ] [ flex-auto ]" role="main">
+        <h1>Interpolate</h1>
+
+        <app-form>
+          <form id="form" class="stack">
+            <fieldset>
+              <legend>Mode</legend>
+              <label for="mode-drums">
+                <input
+                  type="radio"
+                  name="mode"
+                  id="mode-drums"
+                  value="drums_4bar_med_q2"
+                  checked
+                />
+                Drums
+              </label>
+              <label for="mode-melody">
+                <input
+                  type="radio"
+                  name="mode"
+                  id="mode-melody"
+                  value="mel_4bar_med_q2"
+                />
+                Melody
+              </label>
+            </fieldset>
+            <div class="cluster">
+              <div class="flex-auto">
+                <label for="inputOne">Input 1</label>
+                <input type="file" name="inputOne" id="inputOne" required />
+              </div>
+              <div class="flex-auto">
+                <label for="inputTwo">Input 2</label>
+                <input type="file" name="inputTwo" id="inputTwo" required />
+              </div>
             </div>
-            <div class="flex-auto">
-              <label for="inputTwo">Input 2</label>
-              <input type="file" name="inputTwo" id="inputTwo" required />
+            <div class="cluster">
+              <div class="flex-auto">
+                <label for="variations">Steps</label>
+                <input
+                  type="range"
+                  name="variations"
+                  id="variations"
+                  min="1"
+                  max="16"
+                  value="3"
+                />
+                <output for="variations">3</output>
+              </div>
+              <div class="flex-auto">
+                <label for="temperature">Temperature</label>
+                <input
+                  type="range"
+                  name="temperature"
+                  id="temperature"
+                  max="2"
+                  step="0.1"
+                  value="1"
+                />
+                <output for="temperature">1</output>
+              </div>
             </div>
-          </div>
-          <div class="cluster">
-            <div class="flex-auto">
-              <label for="variations">Steps</label>
-              <input
-                type="range"
-                name="variations"
-                id="variations"
-                min="1"
-                max="16"
-                value="3"
-              />
-              <output for="variations">3</output>
-            </div>
-            <div class="flex-auto">
-              <label for="temperature">Temperature</label>
-              <input
-                type="range"
-                name="temperature"
-                id="temperature"
-                max="2"
-                step="0.1"
-                value="1"
-              />
-              <output for="temperature">1</output>
-            </div>
-          </div>
-          <button type="submit" disabled>Initializing&hellip;</button>
-        </form>
-      </app-form>
-    </main>
-    <app-toast form="form"></app-toast>
+            <button type="submit" disabled>Initializing&hellip;</button>
+          </form>
+        </app-form>
+
+        <app-toast form="form"></app-toast>
+      </main>
+
+      <footer class="stack" role="contentinfo">
+        <p>An online version of Magenta Studio.</p>
+        <p>
+          Yet another
+          <a href="https://github.com/ok-steve/magenta-studio-online#readme"
+            >project</a
+          >
+          by <a href="https://stevecherry.net">Steve Cherry</a>.
+        </p>
+      </footer>
+    </div>
   </body>
 </html>
