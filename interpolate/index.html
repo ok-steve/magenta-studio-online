@@ -8,10 +8,6 @@
     <title>Interpolate | Magenta Studio Online</title>
     <meta name="description" content="An online version of Magenta Studio." />
 
-    <link
-      rel="stylesheet"
-      href="https://stevecherry.net/normcore/css/normcore.css"
-    />
     <link rel="stylesheet" href="../public/style.css" />
     <script
       src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@3.11.0/dist/tf.min.js"
@@ -39,11 +35,11 @@
       <main class="[ stack ] [ flex-auto ]" role="main">
         <h1>Interpolate</h1>
 
-        <app-form>
+        <app-form class="block">
           <form id="form" class="stack">
             <fieldset>
               <legend>Mode</legend>
-              <label for="mode-drums">
+              <label class="block" for="mode-drums">
                 <input
                   type="radio"
                   name="mode"
@@ -53,7 +49,7 @@
                 />
                 Drums
               </label>
-              <label for="mode-melody">
+              <label class="block" for="mode-melody">
                 <input
                   type="radio"
                   name="mode"
@@ -65,17 +61,17 @@
             </fieldset>
             <div class="cluster">
               <div class="flex-auto">
-                <label for="inputOne">Input 1</label>
+                <label class="block" for="inputOne">Input 1</label>
                 <input type="file" name="inputOne" id="inputOne" required />
               </div>
               <div class="flex-auto">
-                <label for="inputTwo">Input 2</label>
+                <label class="block" for="inputTwo">Input 2</label>
                 <input type="file" name="inputTwo" id="inputTwo" required />
               </div>
             </div>
             <div class="cluster">
               <div class="flex-auto">
-                <label for="variations">Steps</label>
+                <label class="block" for="variations">Steps</label>
                 <input
                   type="range"
                   name="variations"
@@ -87,7 +83,7 @@
                 <output for="variations">3</output>
               </div>
               <div class="flex-auto">
-                <label for="temperature">Temperature</label>
+                <label class="block" for="temperature">Temperature</label>
                 <input
                   type="range"
                   name="temperature"

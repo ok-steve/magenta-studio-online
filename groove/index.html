@@ -8,10 +8,6 @@
     <title>Groove | Magenta Studio Online</title>
     <meta name="description" content="An online version of Magenta Studio." />
 
-    <link
-      rel="stylesheet"
-      href="https://stevecherry.net/normcore/css/normcore.css"
-    />
     <link rel="stylesheet" href="../public/style.css" />
     <script
       src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@3.11.0/dist/tf.min.js"
@@ -39,14 +35,14 @@
       <main class="[ stack ] [ flex-auto ]" role="main">
         <h1>Groove</h1>
 
-        <app-form>
+        <app-form class="block">
           <form id="form" class="stack">
             <div>
-              <label for="input">Input</label>
+              <label class="block" for="input">Input</label>
               <input type="file" name="input" id="input" required />
             </div>
             <div>
-              <label for="temperature">Temperature</label>
+              <label class="block" for="temperature">Temperature</label>
               <input
                 type="range"
                 name="temperature"
