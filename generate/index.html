@@ -2,12 +2,15 @@
 <html lang="en-US">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>Generate | Magenta Studio Online</title>
     <meta name="description" content="An online version of Magenta Studio." />
 
+    <link
+      rel="stylesheet"
+      href="https://stevecherry.net/normcore/normcore.css"
+    />
     <link rel="stylesheet" href="../public/style.css" />
     <script
       src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@3.11.0/dist/tf.min.js"
@@ -27,19 +30,19 @@
     <script src="./script.js" type="module"></script>
   </head>
   <body>
-    <div class="container cover stack">
+    <div class="center cover">
       <header role="banner">
         <a href="../">Magenta Studio Online</a>
       </header>
 
-      <main class="[ stack ] [ flex-auto ]" role="main">
+      <main class="[ stack ] [ fx-auto ]" role="main">
         <h1>Generate</h1>
 
-        <app-form class="block">
+        <app-form class="d-block">
           <form id="form" class="stack">
             <fieldset>
               <legend>Mode</legend>
-              <label class="block" for="mode-drums">
+              <label for="mode-drums">
                 <input
                   type="radio"
                   name="mode"
@@ -49,7 +52,7 @@
                 />
                 Drums
               </label>
-              <label class="block" for="mode-melody">
+              <label for="mode-melody">
                 <input
                   type="radio"
                   name="mode"
@@ -60,8 +63,8 @@
               </label>
             </fieldset>
             <div class="cluster">
-              <div class="flex-auto">
-                <label class="block" for="variations">Variations</label>
+              <div class="fx-auto">
+                <label for="variations">Variations</label>
                 <input
                   type="range"
                   name="variations"
@@ -72,8 +75,8 @@
                 />
                 <output for="variations">8</output>
               </div>
-              <div class="flex-auto">
-                <label class="block" for="temperature">Temperature</label>
+              <div class="fx-auto">
+                <label for="temperature">Temperature</label>
                 <input
                   type="range"
                   name="temperature"
