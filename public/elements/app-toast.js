@@ -1,4 +1,4 @@
-const template = document.createElement('template');
+const template = document.createElement("template");
 
 template.innerHTML = `
   <style>
@@ -34,17 +34,17 @@ template.innerHTML = `
   </style>
 
   <div>
-    <output role="status"></output>
+    <output is="output-sync" role="status"></output>
     <button tabindex="-1" aria-label="Dismiss toast">&times;</button>
   </div>
 `;
 
 customElements.define(
-  'app-toast',
+  "app-toast",
   class extends HTMLElement {
     constructor() {
       super();
-      this.attachShadow({ mode: 'open' });
+      this.attachShadow({ mode: "open" });
     }
 
     /**
@@ -54,12 +54,12 @@ customElements.define(
     connectedCallback() {
       this.shadowRoot.appendChild(template.content.cloneNode(true));
 
-      ['click'].forEach((name) => {
+      ["click"].forEach((name) => {
         this.addEventListener(name, this);
       });
 
       if (this.form) {
-        this.outputTarget.setAttribute('form', this.form);
+        this.outputTarget.setAttribute("form", this.form);
       }
     }
 
@@ -83,15 +83,15 @@ customElements.define(
      */
 
     get toastTarget() {
-      return this.shadowRoot.querySelector('div');
+      return this.shadowRoot.querySelector("div");
     }
 
     get outputTarget() {
-      return this.toastTarget.querySelector('output');
+      return this.toastTarget.querySelector("output");
     }
 
     get buttonTarget() {
-      return this.toastTarget.querySelector('button');
+      return this.toastTarget.querySelector("button");
     }
 
     /**
@@ -99,7 +99,7 @@ customElements.define(
      */
 
     get form() {
-      return this.getAttribute('form');
+      return this.getAttribute("form");
     }
 
     /**
@@ -111,8 +111,8 @@ customElements.define(
       clearTimeout(this._timer);
       this._focused = document.activeElement;
       this.outputTarget.textContent = message;
-      this.toastTarget.classList.toggle('show', true);
-      this.buttonTarget.setAttribute('tabindex', 0);
+      this.toastTarget.classList.toggle("show", true);
+      this.buttonTarget.setAttribute("tabindex", 0);
 
       this._timer = setTimeout(() => {
         this.close();
@@ -120,11 +120,11 @@ customElements.define(
     }
 
     close() {
-      this.toastTarget.classList.toggle('show', false);
-      this.buttonTarget.setAttribute('tabindex', -1);
+      this.toastTarget.classList.toggle("show", false);
+      this.buttonTarget.setAttribute("tabindex", -1);
 
       this._timer = setTimeout(() => {
-        this.outputTarget.textContent = '';
+        this.outputTarget.textContent = "";
         this._timer = undefined;
       }, 1000);
     }

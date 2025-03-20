@@ -9,7 +9,7 @@
 
     <link
       rel="stylesheet"
-      href="https://stevecherry.net/normcore/normcore.css"
+      href="https://stevecherry.net/normcore/css/normcore.css"
     />
     <link rel="stylesheet" href="../public/style.css" />
     <script
@@ -22,6 +22,10 @@
     ></script>
     <script
       src="https://cdn.jsdelivr.net/npm/@magenta/music@1.23.1/es6/music_vae.js"
+      defer
+    ></script>
+    <script
+      src="https://stevecherry.net/normcore/js/normcore.js"
       defer
     ></script>
     <script src="../public/script.js" defer></script>
@@ -38,7 +42,7 @@
       <main class="[ stack ] [ fx-auto ]" role="main">
         <h1>Interpolate</h1>
 
-        <app-form class="d-block">
+        <app-form>
           <form id="form" class="stack">
             <fieldset>
               <legend>Mode</legend>
@@ -83,7 +87,7 @@
                   max="16"
                   value="3"
                 />
-                <output for="variations">3</output>
+                <output is="output-sync" for="variations">3</output>
               </div>
               <div class="fx-auto">
                 <label for="temperature">Temperature</label>
@@ -95,7 +99,7 @@
                   step="0.1"
                   value="1"
                 />
-                <output for="temperature">1</output>
+                <output is="output-sync" for="temperature">1</output>
               </div>
             </div>
             <button type="submit" disabled>Initializing&hellip;</button>

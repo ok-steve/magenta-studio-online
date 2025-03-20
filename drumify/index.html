@@ -9,7 +9,7 @@
 
     <link
       rel="stylesheet"
-      href="https://stevecherry.net/normcore/normcore.css"
+      href="https://stevecherry.net/normcore/css/normcore.css"
     />
     <link rel="stylesheet" href="../public/style.css" />
     <script
@@ -22,6 +22,10 @@
     ></script>
     <script
       src="https://cdn.jsdelivr.net/npm/@magenta/music@1.23.1/es6/music_vae.js"
+      defer
+    ></script>
+    <script
+      src="https://stevecherry.net/normcore/js/normcore.js"
       defer
     ></script>
     <script src="../public/script.js" defer></script>
@@ -38,7 +42,7 @@
       <main class="[ stack ] [ fx-auto ]" role="main">
         <h1>Drumify</h1>
 
-        <app-form class="d-block">
+        <app-form>
           <form id="form" class="stack">
             <div>
               <label for="input">Input</label>
@@ -54,7 +58,7 @@
                 max="32"
                 value="2"
               />
-              <output for="temperature">2</output>
+              <output is="output-sync" for="temperature">2</output>
             </div>
             <button type="submit" disabled>Initializing&hellip;</button>
           </form>
