@@ -34,7 +34,7 @@ template.innerHTML = `
   </style>
 
   <div>
-    <output is="output-sync" role="status"></output>
+    <output role="status"></output>
     <button tabindex="-1" aria-label="Dismiss toast">&times;</button>
   </div>
 `;
