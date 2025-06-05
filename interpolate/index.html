@@ -38,12 +38,12 @@
     <script src="./script.js" type="module"></script>
   </head>
   <body>
-    <div class="center cover">
+    <div class="center cover stack">
       <header role="banner">
         <a href="../">Magenta Studio Online</a>
       </header>
 
-      <main class="[ stack ] [ fx-auto ]" role="main">
+      <main class="cover-start stack" role="main">
         <h1>Interpolate</h1>
 
         <app-form>
@@ -70,18 +70,18 @@
                 Melody
               </label>
             </fieldset>
-            <div class="cluster">
-              <div class="fx-auto">
+            <div class="cluster cluster-justify">
+              <div>
                 <label for="inputOne">Input 1</label>
                 <input type="file" name="inputOne" id="inputOne" required />
               </div>
-              <div class="fx-auto">
+              <div>
                 <label for="inputTwo">Input 2</label>
                 <input type="file" name="inputTwo" id="inputTwo" required />
               </div>
             </div>
-            <div class="cluster">
-              <div class="fx-auto">
+            <div class="cluster cluster-justify">
+              <div>
                 <label for="variations">Steps</label>
                 <input
                   type="range"
@@ -93,7 +93,7 @@
                 />
                 <output is="output-sync" for="variations">3</output>
               </div>
-              <div class="fx-auto">
+              <div>
                 <label for="temperature">Temperature</label>
                 <input
                   type="range"

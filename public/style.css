@@ -6,3 +6,7 @@
 app-form {
   display: block;
 }
+
+.cluster-between {
+  --cluster-justify: space-between;
+}
