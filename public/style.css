@@ -1,12 +1,8 @@
 :root {
-  --cluster-space: var(--size--1);
-  --center-space: var(--size-1);
+  --cluster-space: var(--space--1);
+  --cluster-justify: space-between;
 }
 
 app-form {
   display: block;
-}
-
-.cluster-between {
-  --cluster-justify: space-between;
 }
