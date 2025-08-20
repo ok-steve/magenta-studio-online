@@ -10,7 +10,7 @@
 
     <link
       rel="stylesheet"
-      href="https://stevecherry.net/normcore/css/normcore.css"
+      href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css"
     />
     <link rel="stylesheet" href="../public/style.css" />
     <script
@@ -25,49 +25,47 @@
       src="https://cdn.jsdelivr.net/npm/@magenta/music@1.23.1/es6/music_vae.js"
       defer
     ></script>
-    <script
-      src="https://stevecherry.net/normcore/js/normcore.js"
-      defer
-    ></script>
+    <script src="../public/script.js" defer></script>
     <script src="../public/elements/app-form.js" defer></script>
     <script src="../public/elements/app-toast.js" defer></script>
     <script src="./script.js" type="module"></script>
   </head>
   <body>
-    <div class="container cover stack">
-      <header role="banner">
-        <a href="../">Magenta Studio Online</a>
-      </header>
+    <header role="banner">
+      <div class="container-fluid">
+        <a rel="home" href="../">Magenta Studio Online</a>
+      </div>
+    </header>
 
-      <main class="[ stack ] [ flex-auto ]" role="main">
+    <main role="main">
+      <div class="container-fluid">
         <h1>Groove</h1>
 
         <app-form>
-          <form id="form" class="stack">
-            <div>
-              <label for="input">Input</label>
-              <input type="file" name="input" id="input" required />
-            </div>
-            <div>
-              <label for="temperature">Temperature</label>
-              <input
-                type="range"
-                name="temperature"
-                id="temperature"
-                max="1"
-                step="0.1"
-                value="1"
-              />
-              <output for="temperature">1</output>
-            </div>
+          <form id="form">
+            <label for="input">Input</label>
+            <input type="file" name="input" id="input" required />
+
+            <label for="temperature">Temperature</label>
+            <output for="temperature">1</output>
+            <input
+              type="range"
+              name="temperature"
+              id="temperature"
+              max="1"
+              step="0.1"
+              value="1"
+            />
+
             <button type="submit" disabled>Initializing&hellip;</button>
           </form>
         </app-form>
-
         <app-toast form="form"></app-toast>
-      </main>
+      </div>
+    </main>
 
-      <footer class="stack" role="contentinfo">
+    <footer role="contentinfo">
+      <div class="container-fluid">
         <p>An online version of Magenta Studio.</p>
         <p>
           Yet another
@@ -76,7 +74,7 @@
           >
           by <a href="https://stevecherry.net">Steve Cherry</a>.
         </p>
-      </footer>
-    </div>
+      </div>
+    </footer>
   </body>
 </html>

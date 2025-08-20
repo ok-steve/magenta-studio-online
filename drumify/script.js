@@ -44,6 +44,7 @@ async function init() {
   // Initialize the models.
   await Promise.all(models.map((model) => model.initialize()));
   submit.textContent = 'Generate';
+  submit.toggleAttribute('disabled', false);
 
   // Disable submit if invalid.
   form.addEventListener('change', () => {

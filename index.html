@@ -10,18 +10,20 @@
 
     <link
       rel="stylesheet"
-      href="https://stevecherry.net/normcore/css/normcore.css"
+      href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css"
     />
     <link rel="stylesheet" href="./public/style.css" />
   </head>
   <body>
-    <div class="container cover stack">
-      <header role="banner">
-        <a href="./">Magenta Studio Online</a>
-      </header>
+    <header role="banner">
+      <div class="container-fluid">
+        <a rel="home" href="./">Magenta Studio Online</a>
+      </div>
+    </header>
 
-      <main class="[ stack ] [ flex-auto ]" role="main">
-        <h1>Magenta Studio Online</h1>
+    <main role="main">
+      <div class="container-fluid">
+        <h1 hidden aria-hidden="false">Magenta Studio Online</h1>
 
         <ul>
           <li><a href="./continue/">Continue</a></li>
@@ -30,9 +32,11 @@
           <li><a href="./groove/">Groove</a></li>
           <li><a href="./drumify/">Drumify</a></li>
         </ul>
-      </main>
+      </div>
+    </main>
 
-      <footer class="stack" role="contentinfo">
+    <footer role="contentinfo">
+      <div class="container-fluid">
         <p>An online version of Magenta Studio.</p>
         <p>
           Yet another
@@ -41,7 +45,7 @@
           >
           by <a href="https://stevecherry.net">Steve Cherry</a>.
         </p>
-      </footer>
-    </div>
+      </div>
+    </footer>
   </body>
 </html>

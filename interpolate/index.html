@@ -10,7 +10,7 @@
 
     <link
       rel="stylesheet"
-      href="https://stevecherry.net/normcore/css/normcore.css"
+      href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css"
     />
     <link rel="stylesheet" href="../public/style.css" />
     <script
@@ -25,25 +25,24 @@
       src="https://cdn.jsdelivr.net/npm/@magenta/music@1.23.1/es6/music_vae.js"
       defer
     ></script>
-    <script
-      src="https://stevecherry.net/normcore/js/normcore.js"
-      defer
-    ></script>
+    <script src="../public/script.js" defer></script>
     <script src="../public/elements/app-form.js" defer></script>
     <script src="../public/elements/app-toast.js" defer></script>
     <script src="./script.js" type="module"></script>
   </head>
   <body>
-    <div class="container cover stack">
-      <header role="banner">
-        <a href="../">Magenta Studio Online</a>
-      </header>
+    <header role="banner">
+      <div class="container-fluid">
+        <a rel="home" href="../">Magenta Studio Online</a>
+      </div>
+    </header>
 
-      <main class="[ stack ] [ flex-auto ]" role="main">
+    <main role="main">
+      <div class="container-fluid">
         <h1>Interpolate</h1>
 
         <app-form>
-          <form id="form" class="stack">
+          <form id="form">
             <fieldset>
               <legend>Mode</legend>
               <label for="mode-drums">
@@ -66,19 +65,23 @@
                 Melody
               </label>
             </fieldset>
-            <div class="cluster">
-              <div class="flex-auto">
+
+            <div class="grid">
+              <div>
                 <label for="inputOne">Input 1</label>
                 <input type="file" name="inputOne" id="inputOne" required />
               </div>
-              <div class="flex-auto">
+
+              <div>
                 <label for="inputTwo">Input 2</label>
                 <input type="file" name="inputTwo" id="inputTwo" required />
               </div>
             </div>
-            <div class="cluster">
-              <div class="flex-auto">
+
+            <div class="grid">
+              <div>
                 <label for="variations">Steps</label>
+                <output for="variations">3</output>
                 <input
                   type="range"
                   name="variations"
@@ -87,10 +90,11 @@
                   max="16"
                   value="3"
                 />
-                <output for="variations">3</output>
               </div>
-              <div class="flex-auto">
+
+              <div>
                 <label for="temperature">Temperature</label>
+                <output for="temperature">1</output>
                 <input
                   type="range"
                   name="temperature"
@@ -99,17 +103,18 @@
                   step="0.1"
                   value="1"
                 />
-                <output for="temperature">1</output>
               </div>
             </div>
+
             <button type="submit" disabled>Initializing&hellip;</button>
           </form>
         </app-form>
-
         <app-toast form="form"></app-toast>
-      </main>
+      </div>
+    </main>
 
-      <footer class="stack" role="contentinfo">
+    <footer role="contentinfo">
+      <div class="container-fluid">
         <p>An online version of Magenta Studio.</p>
         <p>
           Yet another
@@ -118,7 +123,7 @@
           >
           by <a href="https://stevecherry.net">Steve Cherry</a>.
         </p>
-      </footer>
-    </div>
+      </div>
+    </footer>
   </body>
 </html>

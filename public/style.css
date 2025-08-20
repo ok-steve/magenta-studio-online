@@ -1,3 +1,21 @@
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
 app-form {
   display: block;
+}
+
+.container-fluid {
+  max-width: 60ch;
 }
